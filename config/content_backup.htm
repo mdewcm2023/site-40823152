@@ -8,4 +8,56 @@
 <p></p>
 <h2>Deploy to GitHub Pages</h2>
 <p></p>
+<p><strong>Problem:</strong></p>
+<p>Encountered a problem while deploying GitHub Pages.</p>
+<p><span>We can see in the image below that the deployment was unsuccessful.</span></p>
+<p><img alt="" height="479" src="/images/Deploy to GitHub Pages.png" width="1280"/></p>
+<hr/>
+<p>So, I clicked on the URL provided when the error occurred.</p>
+<p>error occurred URL:</p>
+<p><a href="https://pipelines.actions.githubusercontent.com/Hw3e2PMeyWV2jEBbDPrdBukQyp2Y4L1NLtiVjVuuDxGPGj0j0I/_apis/pipelines/workflows/4411085700/artifacts?api-version=6.0-preview">https://pipelines.actions.githubusercontent.com/Hw3e2PMeyWV2jEBbDPrdBukQyp2Y4L1NLtiVjVuuDxGPGj0j0I/_apis/pipelines/workflows/4411085700/artifacts?api-version=6.0-preview</a></p>
+<p></p>
+<p><span>We can see in the information below that it says "unauthorized to access this resource."</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">{"$id":"1","innerException":null,"message":"The user 'System:PublicAccess;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa' is not authorized to access this resource.","typeName":"Microsoft.TeamFoundation.Framework.Server.UnauthorizedRequestException, Microsoft.TeamFoundation.Framework.Server","typeKey":"UnauthorizedRequestException","errorCode":0,"eventId":3000}</pre>
+<p></p>
+<hr/>
+<p><span>So, I created a new token to gain access.</span></p>
+<p>Token:<a href="https://github.com/settings/tokens?page=1">https://github.com/settings/tokens?page=1</a></p>
+<p>Tokem introduce:</p>
+<p><span>Tokens you have generated that can be used to access the </span><a href="https://docs.github.com/" target="_blank">GitHub API</a><span>.</span></p>
+<p><span></span></p>
+<hr/>
+<p></p>
+<p><span>To create a Personal Access Token (classic) in GitHub, please follow these steps:</span></p>
+<ol>
+<li>
+<p>Login to your GitHub account and click on your profile picture in the top right corner.</p>
+</li>
+<li>
+<p>Select "<strong>Settings</strong>" from the dropdown menu.</p>
+</li>
+<li>
+<p>From the left-hand menu, choose "<strong>Personal access tokens."</strong></p>
+</li>
+<li>
+<p>Click on the "<strong>Generate new token</strong>" button.</p>
+</li>
+<li>
+<p>In the "<strong>Token description</strong>" field, enter a description that will help you identify the purpose of this token.</p>
+</li>
+<li>
+<p>Choose the necessary permissions for the token. For example, you may need to select the <strong>"repo"</strong> scope to access repositories.</p>
+</li>
+<li>
+<p>Once you've selected the permissions, click on the "<strong>Generate token</strong>" button.</p>
+</li>
+<li>
+<p>Your token will be generated, and you will be shown the token value.</p>
+</li>
+<li>
+<p>Copy the token and store it in a secure place, as GitHub will not display the token value again.</p>
+</li>
+</ol>
+<p>That's it! You can now use the token to access GitHub APIs or perform actions that require authentication.</p>
+<p><img alt="" height="597" src="/images/Personal access tokens .gif" width="1080"/></p>
 <p></p>
