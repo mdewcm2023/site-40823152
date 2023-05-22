@@ -1151,3 +1151,16 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p>That's it! You can now use the token to access GitHub APIs or perform actions that require authentication.</p>
 <p><img alt="" height="597" src="/images/Personal access tokens .gif" width="1080"/></p>
 <p></p>
+<h2>invalid path</h2>
+<p></p>
+<p><strong>Problem:</strong></p>
+<p><span>I suspect the issue is that the path contains a : which is illegal on Windows.</span></p>
+<p><span>If the following error message appears:</span></p>
+<p></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">error: invalid path 'configs/perl-modules/DIST.64/perl-HTML-Tree-1:5.03-1.el6.noarch.rpm'</pre>
+<p></p>
+<p><span>You can use the following command to fix it.</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git config core.protectNTFS false</pre>
+<p><br/><span>You can use the following command to </span>ignoring the rules and pushing<strong><br/></strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"> git push -f</pre>
+<p></p>
