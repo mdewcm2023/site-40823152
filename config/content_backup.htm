@@ -478,6 +478,164 @@ git push -u origin main</pre>
 <p><img alt="" height="456" src="/images/w16_replit.png" width="800"/></p>
 <p></p>
 <p></p>
+<h2>get_Meteorological_data</h2>
+<p></p>
+<p></p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+</p>
+<p><!-- 導入 FileSaver 與 filereader --></p>
+<p>
+<script src="/static/ace/FileSaver.min.js" type="text/javascript"></script>
+<script src="/static/ace/filereader.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 ace --></p>
+<p>
+<script src="/static/ace/ace.js" type="text/javascript"></script>
+<script src="/static/ace/ext-language_tools.js" type="text/javascript"></script>
+<script src="/static/ace/mode-python3.js" type="text/javascript"></script>
+<script src="/static/ace/snippets/python.js" type="text/javascript"></script>
+</p>
+<p><!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 -->
+<script src="/static/Cango-24v03-min.js"></script>
+<script src="/static/gearUtils-09.js"></script>
+<script src="/static/SVGpathUtils-6v03-min.js"></script>
+<script src="/static/sylvester.js"></script>
+<script src="/static/PrairieDraw.js"></script>
+</p>
+<div></div>
+<hr/>
+<p><button id="add1to100part2">get_Meteorological_dat</button></p>
+<p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
+<p>
+<script type="text/python3">
+from browser import document as doc
+import ace
+# 清除畫布
+def clear_bd2(ev):
+    bd = doc["brython_div2"]
+    bd.clear()
+Ace3 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw__container2", storage_id="kw_py_src2" )
+# 從 gist 取出程式碼後, 放入 editor 作為 default 程式
+def run2():
+    # 利用 get 取下 src 變數值
+    try:
+        url = doc.query["src2"]
+    except:
+        url = "https://gist.githubusercontent.com/40823152/d16ab04b8e9c36e907e69eb73e13e788/raw/012be09a5ebe272f60f551d6e8d0da795ce2af45/get_Meteorological_data.txt"
+    prog = open(url).read()
+
+    # 將程式載入編輯區
+    Ace3.editor.setValue(prog)
+    Ace3.editor.scrollToRow(0)
+    Ace3.editor.gotoLine(0)
+    # 直接執行程式
+    #ns = {'__name__':'__main__'}
+    #exec(prog, ns)
+    # 按下 run 按鈕
+    Ace3.run()
+
+# 執行程式, 顯示輸出結果與清除輸出結果及對應按鈕綁定
+doc['kw_run2'].bind('click', Ace3.run)
+doc['kw_show_console2'].bind('click', Ace3.show_console)
+doc['kw_clear_console2'].bind('click', Ace3.clear_console)
+doc['clear_bd2'].bind('click', clear_bd2)
+# 呼叫函式執行
+run2()
+</script>
+</p>
+<p><!-- add 1 to 100 part2 開始 -->
+<script type="text/python3">
+from browser import document as doc
+import ace
+
+# 清除畫布
+def clear_bd2(ev):
+    bd = doc["brython_div2"]
+    bd.clear()
+
+# 利用 ace 中的 Editor 建立 Ace2 物件, 其中的輸入變數分別對應到頁面中的編輯區物件
+Ace4 = ace.Editor(editor_id="kw_editor2", console_id="kw_console2", container_id="kw__container2", storage_id="kw_py_src2" )
+
+# 透過 Ace4 以類別建立一個通用的 button2, 可以在多個案例中將 gist 程導入編輯區
+
+class button2:
+    def __init__(self, url):
+        self.url = url
+
+    # 記得加入 event 輸入變數
+    def do(self,ev):
+        Ace4.editor.setValue(open(self.url).read())
+        Ace4.editor.scrollToRow(0)
+        Ace4.editor.gotoLine(0)
+        Ace4.run()
+
+add1to100_url = "https://gist.githubusercontent.com/40823152/d16ab04b8e9c36e907e69eb73e13e788/raw/012be09a5ebe272f60f551d6e8d0da795ce2af45/get_Meteorological_data.txt"
+
+# 從 gist 取得程式碼
+add_src = open(add1to100_url).read()
+def add2(ev):
+    Ace4.editor.setValue(add_src)
+    Ace4.editor.scrollToRow(0)
+    Ace4.editor.gotoLine(0)
+    Ace4.run()
+
+# id 為 "add1to100part2" 的按鈕點按時, 執行 add 方法
+doc["add1to100part2"].bind('click', add2)
+# 以下為運用 button2 class 的通用 gist 程式導入區
+################################## cango_three_gears start
+cango_three_gears_url = "https://gist.githubusercontent.com/40823152/d16ab04b8e9c36e907e69eb73e13e788/raw/012be09a5ebe272f60f551d6e8d0da795ce2af45/get_Meteorological_data.txt"
+cango_three_gears = button2(cango_three_gears_url)
+doc["cango_three_gears"].bind("click", cango_three_gears.do)
+################################## cango_three_gears end
+</script>
+</p>
+<p><!-- add 1 to 100 part2 結束--></p>
+<p><!-- editor2 開始 --></p>
+<p><!-- 用來顯示程式碼的 editor 區域 --></p>
+<div id="kw_editor2" style="width: 600px; height: 300px;"></div>
+<p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
+<p><!-- 存擋表單開始 --></p>
+<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<p><!-- 存擋表單結束 --></p>
+<p></p>
+<p><!-- 執行與清除按鈕開始 --></p>
+<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><!-- 執行與清除按鈕結束 --></p>
+<p></p>
+<p><!-- 程式執行 ouput 區 --></p>
+<div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console2" style="width: 315px; height: 116px;"></textarea></div>
+<p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
+<div id="brython_div2"></div>
+<p><!-- editor2 結束 --></p>
+<hr/>
+<p></p>
+<h1>W17</h1>
+<p></p>
+<p><span>w17 在</span>github 以<span> </span><a href="https://github.com/mdecycu/cmsite">cmsite</a><span> </span>作為 template 時, 因為將 cmsimde 作為倉儲的子模組, 因此 import 進入 Replit 時, 除了必須配合授權外 (連接 Replit 與 Github), 還必須在導入<span> </span><a href="https://github.com/scrum-1/scrum-1.github.io">scrum-1.github.io</a><span> </span>之後, 利用<span> </span><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule update --init --recursive</a><span> </span>取下 cmsimde 子模組的內容.</p>
+<p>確認 Replit 並不會在 Import repo from github 時取下子模組內容:</p>
+<p></p>
+<p><img alt="" height="155" src="/images/Import repo from github.png" width="800"/></p>
+<p><span>為了要讓 Replit 環境可以執行 cmsimde 動態網站, 必須安裝下列模組:</span></p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pip install flask flask_cors bs4 lxml pelican markdown gevent</pre>
+<p></p>
+<h2>W17_replit</h2>
+<p>github : <a href="https://github.com/40823152/w17">repo</a> </p>
+<p>replit : <a href="https://replit.com/@40823152/w17#README.md">repo</a></p>
+<p>github page : <a href="https://40823152.github.io/w17/content/index.html">web</a></p>
+<p><img alt="" height="374" src="/images/w17_replit.png" width="800"/></p>
+<p></p>
+<p></p>
 <p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
@@ -1345,13 +1503,7 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div id="brython_div2"></div>
 <!-- editor2 結束 --><hr/>
 <p></p>
-<h3>test2</h3><h1>Notes</h1>
-<p><strong>權限</strong></p>
-<p>.git config</p>
-<p></p>
-<p><strong>提交</strong></p>
-<p>git commit -m /  m-&gt; message</p>
-<p></p>
+<h3>test2</h3>
 <p></p><h1>Fault</h1><h2>Deploy to GitHub Pages</h2>
 <p></p>
 <p><strong>Problem:</strong></p>

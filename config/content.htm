@@ -478,7 +478,7 @@ git push -u origin main</pre>
 <p><img alt="" height="456" src="/images/w16_replit.png" width="800"/></p>
 <p></p>
 <p></p>
-<h2> get_Meteorological_data</h2>
+<h2>get_Meteorological_data</h2>
 <p></p>
 <p></p>
 <!-- 導入 brython 程式庫 -->
@@ -618,7 +618,30 @@ doc["cango_three_gears"].bind("click", cango_three_gears.do)
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div2"></div>
 <p><!-- editor2 結束 --></p>
-<hr/><h1>Brython</h1>
+<hr/>
+<p></p>
+<h1>W17</h1>
+<p></p>
+<p><span>w17 在</span>github 以<span> </span><a href="https://github.com/mdecycu/cmsite">cmsite</a><span> </span>作為 template 時, 因為將 cmsimde 作為倉儲的子模組, 因此 import 進入 Replit 時, 除了必須配合授權外 (連接 Replit 與 Github), 還必須在導入<span> </span><a href="https://github.com/scrum-1/scrum-1.github.io">scrum-1.github.io</a><span> </span>之後, 利用<span> </span><a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodule update --init --recursive</a><span> </span>取下 cmsimde 子模組的內容.</p>
+<p>確認 Replit 並不會在 Import repo from github 時取下子模組內容:</p>
+<p></p>
+<p><img alt="" height="155" src="/images/Import repo from github.png" width="800"/></p>
+<p><span>為了要讓 Replit 環境可以執行 cmsimde 動態網站, 必須安裝下列模組:</span></p>
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pip install flask flask_cors bs4 lxml pelican markdown gevent</pre>
+<p></p>
+<h2>W17_replit</h2>
+<p>github : <a href="https://github.com/40823152/w17">repo</a> </p>
+<p>replit : <a href="https://replit.com/@40823152/w17#README.md">url</a></p>
+<p>github page : <a href="https://40823152.github.io/w17/content/index.html">web</a></p>
+<p></p>
+<p>github page web image:</p>
+<p><img alt="" height="425" src="/images/w17_replit_web.png" width="800"/></p>
+<p></p>
+<p><span>replit  image:</span></p>
+<p><img alt="" height="374" src="/images/w17_replit.png" width="800"/></p>
+<p></p>
+<p></p>
+<p></p><h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</a></p>
@@ -1485,13 +1508,7 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div id="brython_div2"></div>
 <!-- editor2 結束 --><hr/>
 <p></p>
-<h3>test2</h3><h1>Notes</h1>
-<p><strong>權限</strong></p>
-<p>.git config</p>
-<p></p>
-<p><strong>提交</strong></p>
-<p>git commit -m /  m-&gt; message</p>
-<p></p>
+<h3>test2</h3>
 <p></p><h1>Fault</h1><h2>Deploy to GitHub Pages</h2>
 <p></p>
 <p><strong>Problem:</strong></p>
